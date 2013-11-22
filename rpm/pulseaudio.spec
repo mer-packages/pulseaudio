@@ -312,3 +312,4 @@ ln -s ../pulseaudio.service %{buildroot}/usr/lib/systemd/user/user-session.targe
 %config %{_sysconfdir}/xdg/autostart/pulseaudio-kde.desktop
 %{_bindir}/start-pulseaudio-kde
 %endif
+
