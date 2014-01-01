@@ -125,8 +125,17 @@ to manage the devices in PulseAudio.
 echo "%{pulseversion}" > .tarball-version
 NOCONFIGURE=1 ./bootstrap.sh
 
-%configure --disable-static \
-    --enable-neon-opt
+%ifarch %{arm}
+export CFLAGS="$CFLAGS -mfpu=neon"
+export CXXFLAGS="$CXXFLAGS -mfpu=neon"
+%endif
+
+%configure \
+%ifarch %{arm}
+    --enable-neon-opt \
+%endif
+    --disable-static
+
 
 make %{?jobs:-j%jobs}
 
