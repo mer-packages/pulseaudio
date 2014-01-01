@@ -126,7 +126,7 @@ echo "%{pulseversion}" > .tarball-version
 NOCONFIGURE=1 ./bootstrap.sh
 
 %configure --disable-static \
-    --disable-neon-opt
+    --enable-neon-opt
 
 make %{?jobs:-j%jobs}
 
