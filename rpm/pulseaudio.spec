@@ -21,6 +21,7 @@ Patch3:     0004-daemon-Set-default-resampler-to-speex-fixed-2.patch
 Patch4:     0005-bluetooth-Allow-leaving-transport-running-while-sink.patch
 Patch5:     0006-client-Disable-client-autospawn-by-default.patch
 Patch6:     0007-bluetooth-Do-not-lose-transport-pointer-after-gettin.patch
+Patch7:     0101-core-make-dependencies-compile-for-64bit.patch
 Requires:   udev
 Requires:   libsbc >= 1.0
 Requires(post): /sbin/ldconfig
@@ -120,6 +121,8 @@ to manage the devices in PulseAudio.
 %patch5 -p1
 # 0007-bluetooth-Do-not-lose-transport-pointer-after-gettin.patch
 %patch6 -p1
+# 0101-core-make-dependencies-compile-for-64bit.patch
+%patch7 -p1
 
 %build
 echo "%{pulseversion}" > .tarball-version
