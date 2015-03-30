@@ -311,7 +311,12 @@ ln -s ../pulseaudio.service %{buildroot}/usr/lib/systemd/user/user-session.targe
 %{_libdir}/pulse-%{pulseversion}/modules/module-volume-restore.so
 %{_libdir}/pulse-%{pulseversion}/modules/module-remap-source.so
 %{_libdir}/pulse-%{pulseversion}/modules/module-role-ducking.so
+%dir %{_libdir}/pulseaudio
 %{_libdir}/pulseaudio/*.so
+%dir %{_datadir}/pulseaudio
+%dir %{_datadir}/pulseaudio/alsa-mixer
+%dir %{_datadir}/pulseaudio/alsa-mixer/paths
+%dir %{_datadir}/pulseaudio/alsa-mixer/profile-sets
 %{_datadir}/pulseaudio/alsa-mixer/paths/*.conf
 %{_datadir}/pulseaudio/alsa-mixer/paths/*.common
 %{_datadir}/pulseaudio/alsa-mixer/profile-sets/*.conf
